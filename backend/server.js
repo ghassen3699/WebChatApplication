@@ -5,9 +5,9 @@ import messageRoutes from "./routes/message.routes.js";
 import userRoutes from './routes/user.route.js';
 import connectToMongoDB from "./db/connecToMongoDB.js";
 import cookieParser from "cookie-parser";
+import { app, server } from "./socket/socket.js";
 
 
-const app = express() ;
 const PORT = process.env.PORT || 5000 ;
 
 
@@ -23,11 +23,11 @@ app.use('/api/users', userRoutes) ;
 
 const corsOptions ={
    origin:'*', 
-   credentials:true,            //access-control-allow-credentials:true
+   credentials:true,    
    optionSuccessStatus:200,
 }
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     connectToMongoDB();
     console.log('SERVER RUNNING ON PORT '+ PORT) ;
 });
