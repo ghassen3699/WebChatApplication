@@ -1,4 +1,5 @@
 Real-Time Web Chat Application
+
 This project is a real-time web chat application built using a modern tech stack including React, Vite, TypeScript, Node.js, Express.js, MongoDB, Mongoose, Socket.IO, Zustand, and Tailwind CSS.
 
 Installation
